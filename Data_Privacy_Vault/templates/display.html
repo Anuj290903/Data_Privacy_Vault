@@ -1,0 +1,13 @@
+{% load static %}
+{% block body %}
+        {% block script %}
+        <script src="{% static 'main.js' %}"></script>
+        {% endblock %}
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        <h1>Data Privacy Vault</h1>
+        <p>Here is the data you requested:</p>
+        <p>First Name: <span id="first-name"></span></p>
+        <p>Last Name: <span id="last-name"></span></p>
+        <p>Email: <span id="email"></span></p>
+        <p>Phone: <span id="phone"></span></p>
+{% endblock %}        
